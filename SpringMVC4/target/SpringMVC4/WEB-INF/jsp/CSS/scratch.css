@@ -1,0 +1,133 @@
+*,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+.cContainerFluid .cRow {
+    height: 100vh;
+    width: 100vw;
+}
+.cContainerFluid .cRow .cColNavbarLeft {
+    border-right: 1px solid #0078dc;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelTitle {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelTitle .title {
+    padding: 20px;
+    text-decoration: none;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelTitle .title a {
+    text-decoration: none;
+    color: black;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelUser {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelUser .avartar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelUser .info {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelUser .info__item {
+    height: 30px;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelUser .info__logout {
+    height: 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 16;
+    font-weight: 400;
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: #0078dc;
+    border-radius: 5px;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelMenu {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.cContainerFluid .cRow .cColNavbarLeft__panelMenu .menu-item {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #0078dc;
+    color: whitesmoke;
+    text-decoration: none;
+}
+.cContainerFluid .cRow .cColContent .theCourse .title {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+}
+.cContainerFluid .cRow .cColContent .theCourse .boxBorder {
+    height: auto;
+    width: 100%;
+    display: block;
+    border: 1px solid #0078dc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    overflow: auto;
+}
+.cContainerFluid .cRow .cColContent .theCourse .boxFunction {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.cContainerFluid .cRow .cColContent .theCourse .boxFunction .boxSearch {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.cContainerFluid .cRow .cColContent .theCourse .boxFunction .boxSearch__input {
+    margin-right: 10px;
+}
+.cContainerFluid .cRow .cColContent .theCourse .boxFunction .boxSearch__button {
+    height: 40px;
+    width: 150px;
+}
+
