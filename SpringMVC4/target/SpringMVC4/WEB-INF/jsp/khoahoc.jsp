@@ -165,7 +165,11 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
+<<<<<<< HEAD
                 <span class="title"><a href="./trangchu.jsp">Quản lý đào tạo cán bộ</a></span>
+=======
+                <span class="title"><a href="khoa-hoc">Quản lý đào tạo cán bộ</a></span>
+>>>>>>> 1877fca527e2a8e6e6d87348e788a9654439520b
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -196,13 +200,17 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action active" >
-                        <a href="./khoahoc.jsp" style="text-decoration: none;color: white;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: white;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="./hocvien.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="can-bo" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action">
-                        <a href="./hocvien.jsp" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                        <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action ">
+                        <a href="ket-qua-khoa-hoc" style="text-decoration: none;color: black;">
+                            Kết Quả Khóa Học</a>
                     </button>
                 </div>
             </div>
@@ -233,7 +241,7 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Tên Khoá học</th>
+                            <th scope="col">${TENKHOAHOC}</th>
                             <th scope="col">Thời gian</th>
                             <th scope="col">Địa điểm</th>
                             <th scope="col">Dự toán</th>
@@ -249,9 +257,10 @@
                             <td>Test data 1</td>
                             <td>Test data 1</td>
                             <td>
-                                <div>
-                                    <input type="radio" id="dewey" name="drone" value="dewey">
-                                    <label for="dewey"></label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
                                 </div>
                             </td>
                             <td>
@@ -264,10 +273,10 @@
                         "
                                 >
                                     <button>
-                                        <a href="./ChiTiet_Khoahoc.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                     </button>
                                     <button >
-                                        <a style="color: black;" href="./Sua_KhoaHoc.html"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
                                     <button>
                                         <i class="fas fa-trash-alt fa-lg"></i>
@@ -282,9 +291,10 @@
                             <td>Test data 2</td>
                             <td>Test data 2</td>
                             <td>
-                                <div>
-                                    <input type="radio" id="dewey" name="drone" value="dewey">
-                                    <label for="dewey"></label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
                                 </div>
                             </td>
                             <td>

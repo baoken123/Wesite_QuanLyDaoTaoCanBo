@@ -16,10 +16,20 @@ public class KhoaHoc implements IKhoaHoc {
     DataSource dataSource;
 
     @Override
+    public ServerResult TaoKhoaHoc() {
+        return null;
+    }
+
+    @Override
     public List LayDanhSachKhoaHoc() {
         String sql = "call LayDanhSachKhoaHoc#c";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<Map<String, Object>> result=jdbcTemplate.queryForList(sql, new Object[]{});
         return result;
+    }
+
+    @Override
+    public List ChiTietKhoaHoc(String maKhoaHoc) {
+        return null;
     }
 }
