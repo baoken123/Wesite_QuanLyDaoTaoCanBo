@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ntngo
-  Date: 3/24/2021
-  Time: 2:53 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -29,7 +23,7 @@
             crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../template.css" />
-    <title>Thêm Học Viên</title>
+    <title>Kết Quả Khóa Học</title>
 </head>
 <style>
     *,
@@ -204,16 +198,16 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="can-bo" style="text-decoration: none;color: black;">Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: white;">Lớp Học Viên</a>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../KetQuaKH/KetQuaKH.html" style="text-decoration: none;color: black;">
+                        <a href="ket-qua" style="text-decoration: none;color: white;">
                             Kết Quả Khóa Học</a>
                     </button>
                 </div>
@@ -222,12 +216,9 @@
         <div class="col-md-8 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Thêm Lớp Học Viên</span>
+                <span class="title">Thêm Kết Quả Khóa Học</span>
                 <div class="boxBorder boxFunction">
-                    <button type="button" class="btn btn-primary">
-                        <div class="btn btn-primary"><a href="hoc-vien"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
-                        <div class="boxSearch">
-                    </button>
+                    <div class="btn btn-primary"><a href="ket-qua-khoa-hoc"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
                     <div class="boxSearch">
                         <input
                                 type="email"
@@ -241,19 +232,50 @@
                         </button>
                     </div>
                 </div>
+                <!-- khoa hoc -->
                 <div class="boxBorder">
                     <div class="form-group">
-                        <label for="">Tên Lớp Học Viên</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
+                        <label for="">Tên Cán Bộ</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
 
-                        <label for="">Số Lượng</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
+                        <label for="">Kết Quả Khóa Học</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
 
-                        <label for="">Tên Giảng Viên</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+                        <label for="">Chức Vụ</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
 
+                        <label for="">Tên Lớp</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                        <label for="">Giảng Viên Đào Tạo</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                        <label for="">Nội Dung Đào Tạo</label>
+                        <textarea class="form-control" name="" id="" cols="20" rows="4"></textarea>
+                        <!-- <input type="text"
+                          class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học"> -->
+
+                        <label for="">Thời Gian Bắt Đầu</label>
+                        <input type="datetime-local"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                        <label for="">Thời Gian Kết Thúc</label>
+                        <input type="datetime-local"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                        <label for="">Địa Điểm</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+
+                        <label for="">Dự Toán</label>
+                        <input type="text"
+                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
                     </div>
-
                 </div>
                 <div class="box-button">
                     <div class="btn btn-primary">Đồng Ý</div>
