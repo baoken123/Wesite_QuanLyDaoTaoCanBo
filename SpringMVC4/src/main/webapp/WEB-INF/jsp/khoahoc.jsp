@@ -196,16 +196,16 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action active" >
-                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: white;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: white;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="can-bo" style="text-decoration: none;color: black;">Cán Bộ</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                        <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../KetQuaKH/KetQuaKH.html" style="text-decoration: none;color: black;">
+                        <a href="ket-qua-khoa-hoc" style="text-decoration: none;color: black;">
                             Kết Quả Khóa Học</a>
                     </button>
                 </div>
