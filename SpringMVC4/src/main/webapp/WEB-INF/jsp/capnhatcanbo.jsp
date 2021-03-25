@@ -203,10 +203,14 @@
             <!-- Danh sách menu -->
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
-                    <button type="button" class="list-group-item list-group-item-action"><a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a></button>
-                    <button type="button" class="list-group-item list-group-item-action active">Học Viên</button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                    <button type="button" class="list-group-item list-group-item-action " >
+                        <a href="./khoahoc.jsp" style="text-decoration: none;color: black;">Khóa Học</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action ">
+                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action active">
+                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Lớp Học Viên</a>
                     </button>
                 </div>
             </div>
@@ -217,7 +221,8 @@
                 <span class="title">Sửa Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <div class="btn btn-primary"><a href="../CanBo/CanBo.html"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
+                        <div class="btn btn-primary"><a href="./canbo.jsp">
+                            <i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
                         <div class="boxSearch">
                     </button>
                     <div class="boxSearch">

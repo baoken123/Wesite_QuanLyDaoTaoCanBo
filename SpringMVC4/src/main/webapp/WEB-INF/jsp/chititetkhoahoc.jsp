@@ -197,13 +197,13 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action active" >
-                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: white;">Khóa Học</a>
+                        <a href="./khoahoc.jsp" style="text-decoration: none;color: white;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                        <a href="./hocvien.jsp" style="text-decoration: none;color: black;">Lớp Học Viên</a>
                     </button>
                 </div>
 
@@ -215,7 +215,7 @@
                 <span class="title">Chi Tiết Khóa Học</span>
                 <div class="boxBorder boxFunction">
                     <div class="box-button">
-                        <div class="btn btn-primary"><a href="./template.html"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
+                        <div class="btn btn-primary"><a href="./khoahoc.jsp"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
                     </div>
                     <div class="boxSearch">
                         <input

@@ -172,7 +172,7 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
-                <span class="title"><a href="../KhoaHoc/template.html">Quản lý đào tạo cán bộ</a></span>
+                <span class="title"><a href="./khoahoc.jsp">Quản lý đào tạo cán bộ</a></span>
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -202,10 +202,14 @@
             <!-- Danh sách menu -->
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
-                    <button type="button" class="list-group-item list-group-item-action"><a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a></button>
-                    <button type="button" class="list-group-item list-group-item-action active">Học Viên</button>
-                    <button type="button" class="list-group-item list-group-item-action">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: black;">Lớp Học Viên</a>
+                    <button type="button" class="list-group-item list-group-item-action " >
+                        <a href="./khoahoc.jsp" style="text-decoration: none;color: black;">Khóa Học</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action ">
+                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action active">
+                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Lớp Học Viên</a>
                     </button>
                 </div>
             </div>
@@ -216,7 +220,7 @@
                 <span class="title">Danh Sách Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <a href="../CanBo/Them_canbo.html" style="text-decoration: none;color: white;">Thêm Học viên</a>
+                        <a href="./themcanbo.jsp" style="text-decoration: none;color: white;">Thêm Học viên</a>
                     </button>
                     <div class="boxSearch">
                         <input
@@ -269,7 +273,7 @@
                                         <a href="" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                     </button>
                                     <button >
-                                        <a style="color: black;" href="../CanBo/sua_canbo.html"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        <a style="color: black;" href="./capnhatcanbo.jsp"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
                                     <button>
                                         <i class="fas fa-trash-alt fa-lg"></i>
