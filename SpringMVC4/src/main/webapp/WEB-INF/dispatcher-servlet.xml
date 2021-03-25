@@ -9,10 +9,9 @@
 
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.javapointers.controllers"/>
-    <context:component-scan base-package="dangnhap"/>
     <bean id="SessionFilter" class="com.javapointers.session.SessionFilter"/>
     <bean id="User" class="com.javapointers.models.User"/>
-
+    <bean id="KhoaHoc" class="com.javapointers.models.KhoaHoc"/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/jsp/</value>

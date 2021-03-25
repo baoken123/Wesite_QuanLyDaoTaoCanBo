@@ -173,7 +173,7 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
-                <span class="title"><a href="../KhoaHoc/template.html">Quản lý đào tạo cán bộ</a></span>
+                <span class="title"><a href="./hocvien.jsp">Quản lý đào tạo cán bộ</a></span>
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -204,13 +204,13 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="./khoahoc.jsp" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: white;">Lớp Học Viên</a>
+                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Lớp Học Viên</a>
                     </button>
                 </div>
             </div>
@@ -221,7 +221,7 @@
                 <span class="title">Sửa Lớp Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <div class="btn btn-primary"><a href="../HocVien/Hocvien.html"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
+                        <div class="btn btn-primary"><a href="./hocvien.jsp"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
                         <div class="boxSearch">
                     </button>
                     <div class="boxSearch">

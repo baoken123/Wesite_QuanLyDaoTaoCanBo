@@ -165,7 +165,7 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
-                <span class="title"><a href="./template.html">Quản lý đào tạo cán bộ</a></span>
+                <span class="title"><a href="./trangchu.jsp">Quản lý đào tạo cán bộ</a></span>
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -199,7 +199,7 @@
                         <a href="./khoahoc.jsp" style="text-decoration: none;color: white;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="./hocvien.jsp" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action">
                         <a href="./hocvien.jsp" style="text-decoration: none;color: black;">Lớp Học Viên</a>
@@ -213,7 +213,7 @@
                 <span class="title">Quản lý khoá học</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <a href="./themkhoahoc.jsp" style="text-decoration: none;color: white;">Thêm Khóa Học</a>
+                        <a href="them-khoa-hoc" style="text-decoration: none;color: white;">Thêm Khóa Học</a>
                     </button>
                     <div class="boxSearch">
                         <input

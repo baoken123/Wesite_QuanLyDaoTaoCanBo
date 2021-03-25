@@ -29,26 +29,26 @@ public class NguoiDungController {
     ISessionFilter SessionFilter;
 
     @Autowired
-    IUser user;
+    IUser User;
 
     public static boolean isLocalHost;
 
-    @RequestMapping(value = "/dang-nhap")
-    public String DangNhap(ModelMap mm, HttpSession session) {
+    @RequestMapping(value = "/")
+    public String Index(ModelMap mm, HttpSession session) {
         if (SessionFilter.checkSession(session)) {
-            return "trangchu";
+            return "khoahoc";
         }
         return "dangnhap";
     }
 
-    @RequestMapping(value = "/login", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
+    @RequestMapping(value = "/dang-nhap", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
     public @ResponseBody
     String Login(@RequestParam(value = "tenDangNhap") String tenDangNhap, @RequestParam(value = "matKhau") String matKhau, HttpSession session, HttpServletResponse response, HttpServletRequest request) {
         Account objUser = new Account();
         objUser.ganTenDangNhap(tenDangNhap);
         objUser.ganMatKhau(tienich.tienich.encodePass(matKhau).trim());
         if (objUser != null) {
-            List<Map<String, Object>> list = user.dangNhap(objUser);
+            List<Map<String, Object>> list = User.dangNhap(objUser);
             if (!list.isEmpty()) {
                 return "SUCCESS";
             }
@@ -57,16 +57,9 @@ public class NguoiDungController {
         return "FAIL";
     }
 
-    @RequestMapping(value = "/logout")
+    @RequestMapping(value = "/dang-xuat")
     public String logout(HttpSession session) {
         session.invalidate();
-        return "trangchu";
-    }
-
-    @RequestMapping(value = "/dsnguodung")
-    public @ResponseBody
-    List dsnguoidung(HttpSession session, HttpServletResponse response, HttpServletRequest request) {
-            List<Map<String, Object>> list = user.dsnguoidung();
-            return list;
+        return "/";
     }
 }
