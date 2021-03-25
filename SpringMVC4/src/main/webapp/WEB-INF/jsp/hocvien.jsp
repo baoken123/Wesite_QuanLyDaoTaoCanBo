@@ -204,13 +204,17 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="./khoahoc.jsp" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Lớp Học Viên</a>
+                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: white;">Lớp Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action ">
+                        <a href="../KetQuaKH/KetQuaKH.html" style="text-decoration: none;color: black;">
+                            Kết Quả Khóa Học</a>
                     </button>
                 </div>
             </div>
@@ -221,7 +225,7 @@
                 <span class="title">Danh Sách Lớp Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <a href="./themhocvien.jsp" style="text-decoration: none;color: white;">Thêm Lớp Học viên</a>
+                        <a href="them-hoc-vien" style="text-decoration: none;color: white;">Thêm Lớp Học viên</a>
                     </button>
                     <div class="boxSearch">
                         <input
@@ -255,9 +259,10 @@
                             <td>Test data 1</td>
                             <td>Test data 1</td>
                             <td>
-                                <div>
-                                    <input type="radio" id="dewey" name="drone" value="dewey">
-                                    <label for="dewey"></label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
                                 </div>
                             </td>
 
@@ -271,10 +276,10 @@
                         "
                                 >
                                     <button>
-                                        <a href="chitiethocvien.jsp" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        <a href="chi-tiet-hoc-vien" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                     </button>
                                     <button >
-                                        <a style="color: black;" href="./capnhathocvien.jsp"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        <a style="color: black;" href="cap-nhat-hoc-vien"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
                                     <button>
                                         <i class="fas fa-trash-alt fa-lg"></i>
@@ -288,9 +293,10 @@
                             <td>Test data 2</td>
                             <td>Test data 2</td>
                             <td>
-                                <div>
-                                    <input type="radio" id="dewey" name="drone" value="dewey">
-                                    <label for="dewey"></label>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
                                 </div>
                             </td>
 

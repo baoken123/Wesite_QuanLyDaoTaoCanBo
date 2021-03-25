@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ntngo
-  Date: 3/24/2021
-  Time: 2:53 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -29,7 +23,7 @@
             crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../template.css" />
-    <title>Thêm Học Viên</title>
+    <title>Kết Quả Khóa Học</title>
 </head>
 <style>
     *,
@@ -178,7 +172,7 @@
             <hr />
             <div class="cColNavbarLeft__panelUser">
                 <img
-                        src="https://via.placeholder.com/100x100   "
+                        src="https://via.placeholder.com/100x100 "
                         alt=""
                         class="avartar"
                 />
@@ -204,29 +198,28 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="can-bo" style="text-decoration: none;color: black;">Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action">
+                        <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: white;">Lớp Học Viên</a>
-                    </button>
-                    <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="../KetQuaKH/KetQuaKH.html" style="text-decoration: none;color: black;">
+                        <a href="ket-qua" style="text-decoration: none;color: white;">
                             Kết Quả Khóa Học</a>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="col-md-8 cColContent">
+        <div class="col-md-9 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Thêm Lớp Học Viên</span>
+                <span class="title">Quản lý Kết Quả Khóa Học</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <div class="btn btn-primary"><a href="hoc-vien"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
-                        <div class="boxSearch">
+                        <a href="them-ket-qua-khoa-hoc" style="text-decoration: none;color: white;">Thêm Kết Quả</a>
                     </button>
                     <div class="boxSearch">
                         <input
@@ -242,21 +235,89 @@
                     </div>
                 </div>
                 <div class="boxBorder">
-                    <div class="form-group">
-                        <label for="">Tên Lớp Học Viên</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
-
-                        <label for="">Số Lượng</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
-
-                        <label for="">Tên Giảng Viên</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
-
-                    </div>
-
-                </div>
-                <div class="box-button">
-                    <div class="btn btn-primary">Đồng Ý</div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tên Cán Bộ</th>
+                            <th scope="col">Chức Vụ</th>
+                            <th scope="col">Tên Lớp Học</th>
+                            <th scope="col">Kết Quả Khóa Học</th>
+                            <th scope="col">Duyệt</th>
+                            <th scope="col">Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Test data 1</td>
+                            <td>Test data 1</td>
+                            <td>Test data 1</td>
+                            <td>Test data 1</td>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                    </button>
+                                    <button >
+                                        <a style="color: black;" href="cap-nhap-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Test data 2</td>
+                            <td>Test data 2</td>
+                            <td>Test data 2</td>
+                            <td>Test data 2</td>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

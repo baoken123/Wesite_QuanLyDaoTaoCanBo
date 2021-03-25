@@ -173,7 +173,7 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
-                <span class="title"><a href="./khoahoc.jsp">Quản lý đào tạo cán bộ</a></span>
+                <span class="title"><a href="khoa-hoc">Quản lý đào tạo cán bộ</a></span>
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -204,13 +204,17 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="./khoahoc.jsp" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="../KhoaHoc/template.html" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="./canbo.jsp" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="../CanBo/CanBo.html" style="text-decoration: none;color: black;">Học Viên</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Lớp Học Viên</a>
+                        <a href="../HocVien/Hocvien.html" style="text-decoration: none;color: white;">Lớp Học Viên</a>
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action ">
+                        <a href="../KetQuaKH/KetQuaKH.html" style="text-decoration: none;color: black;">
+                            Kết Quả Khóa Học</a>
                     </button>
                 </div>
             </div>
@@ -221,7 +225,7 @@
                 <span class="title">Chi Tiết Lớp Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <a href="./hocvien.jsp" style="text-decoration: none;color: white;">Trở Về</a>
+                        <a href="hoc-vien" style="text-decoration: none;color: white;">Trở Về</a>
                     </button>
                     <div class="boxSearch">
                         <input
