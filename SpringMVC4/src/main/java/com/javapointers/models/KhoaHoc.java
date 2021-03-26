@@ -21,7 +21,7 @@ public class KhoaHoc implements IKhoaHoc {
     }
 
     @Override
-    public List LayDanhSachKhoaHoc() {
+    public List<Map<String, Object>> LayDanhSachKhoaHoc() {
         String sql = "call LayDanhSachKhoaHoc#c";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<Map<String, Object>> result=jdbcTemplate.queryForList(sql, new Object[]{});

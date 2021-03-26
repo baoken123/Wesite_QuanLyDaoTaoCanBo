@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="UTF-8" />
@@ -88,7 +89,7 @@
         justify-content: center;
         align-items: center;
         font-family: "Noto Sans JP", sans-serif;
-        font-size: 16;
+        font-size: 16px;
         font-weight: 400;
         color: whitesmoke;
         text-decoration: none;
@@ -165,11 +166,7 @@
         <div class="col-md-3 cColNavbarLeft">
             <!-- Tiêu đề của navbar left -->
             <div class="cColNavbarLeft__panelTitle">
-<<<<<<< HEAD
                 <span class="title"><a href="./trangchu.jsp">Quản lý đào tạo cán bộ</a></span>
-=======
-                <span class="title"><a href="khoa-hoc">Quản lý đào tạo cán bộ</a></span>
->>>>>>> 1877fca527e2a8e6e6d87348e788a9654439520b
             </div>
             <hr />
             <div class="cColNavbarLeft__panelUser">
@@ -203,7 +200,7 @@
                         <a href="khoa-hoc" style="text-decoration: none;color: white;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
-                        <a href="can-bo" style="text-decoration: none;color: black;">Học Viên</a>
+                        <a href="can-bo" style="text-decoration: none;color: black;">Cán Bộ</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action">
                         <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
@@ -241,49 +238,37 @@
                         <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">${TENKHOAHOC}</th>
-                            <th scope="col">Thời gian</th>
+                            <th scope="col">Tên Khoá học</th>
+                            <th scope="col">Thời gian bắt đầu</th>
+                            <th scope="col">Thời gian kết thúc</th>
                             <th scope="col">Địa điểm</th>
                             <th scope="col">Dự toán</th>
                             <th scope="col">Duyệt</th>
                             <th scope="col">Thao tác</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div
-                                        style="
-                          display: flex;
-                          flex-flow: row nowrap;
-                          justify-content: space-evenly;
-                          align-items: center;
-                        "
-                                >
-                                    <button>
-                                        <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
-                                    </button>
-                                    <button >
-                                        <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                        <tbody id="table-danh-sach-khoa-hoc">
+                                <td>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div style="display: flex; flex-flow: row nowrap; justify-content: space-evenly; align-items: center;">
+                                        <button>
+                                            <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        </button>
+                                        <button >
+                                            <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Test data 2</td>
@@ -327,9 +312,30 @@
 </div>
 
 <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"
 ></script>
+
+<script>
+    $(document).ready(()=>{
+        $.ajax({
+            url:'/danh-sach-khoa-hoc',
+            accept: 'application/json',
+            type: 'GET',
+            contentType: 'application/json'
+        }).done((response)=>{
+            console.log(response);
+        });
+
+
+        const tableDanhSachKhoaHoc=$("#table-danh-sach-khoa-hoc");
+
+    })
+</script>
 </body>
 </html>

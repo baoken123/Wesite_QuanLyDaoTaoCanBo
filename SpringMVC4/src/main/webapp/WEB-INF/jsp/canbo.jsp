@@ -206,7 +206,11 @@
                         <a href="khoa-hoc" style="text-decoration: none;color: black;">Khóa Học</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
+<<<<<<< HEAD
                         <a href="can-bo" style="text-decoration: none;color: white;">Cán bộ</a>
+=======
+                        <a href="can-bo" style="text-decoration: none;color: white;">Cán Bộ</a>
+>>>>>>> 35c887b1c0c6928d31e3deffe07322b76a224880
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
                         <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
