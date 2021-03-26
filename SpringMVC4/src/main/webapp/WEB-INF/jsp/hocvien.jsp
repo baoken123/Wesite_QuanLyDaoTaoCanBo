@@ -281,9 +281,11 @@
                                     <button >
                                         <a style="color: black;" href="cap-nhat-hoc-vien"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
+                                    <a href="#">
+                                        <button type="" id="data-canbo" data-canbo="datacanbo">
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </a>
                                 </div>
                             </td>
                         </tr>

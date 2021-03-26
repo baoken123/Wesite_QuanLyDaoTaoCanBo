@@ -233,48 +233,49 @@
                     </div>
                 </div>
                 <!-- khoa hoc -->
+                <form action="/" id="form-capnhat-ketqua-khoahoc"></form>
                 <div class="boxBorder">
                     <div class="form-group">
                         <label for="">Tên Cán Bộ</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="tencabo" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Kết Quả Khóa Học</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="ketqua-khoahoc" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Chức Vụ</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="chucvu" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Tên Lớp</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="tenlop" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Giảng Viên Đào Tạo</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="giangvien-daotao" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Nội Dung Đào Tạo</label>
-                        <textarea class="form-control" name="" id="" cols="20" rows="4"></textarea>
+                        <textarea class="form-control" name="noidung-daotao" id="" cols="20" rows="4"></textarea>
                         <!-- <input type="text"
                           class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học"> -->
 
                         <label for="">Thời Gian Bắt Đầu</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="thoigian-batdau" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Thời Gian Kết Thúc</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="thoigian-ketthuc" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Địa Điểm</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="diadiem" id="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Dự Toán</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="dutoan" id="" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
                 <div class="box-button">
@@ -288,7 +289,64 @@
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+
+        //khi nút submit được click
+        submit.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            var tencanbo = $("input[name='tencabo']").val(); //lấy giá trị trong input user
+            var ketquakhoahoc = $("input[name='ketqua-khoahoc']").val();
+            var chucvu = $("input[name='chucvu']").val();
+            var tenlop = $("input[name='tenlop']").val();
+            var giangviendaotao = $("input[name='giangvien-daotao']").val();
+            var noidungdaotao = $("input[name='noidung-daotao']").val();
+            var thoigianbatdau = $("input[name='thoigian-batdau']").val();
+            var thoigianketthuc = $("input[name='thoigian-ketthuc']").val();
+            var diadiem = $("input[name='diadiem']").val();
+            var dutoan = $("input[name='dutoan']").val();
+            //Kiểm tra xem trường đã được nhập hay chưa
+            // var data = JSON.stringify({
+            //     Tencanbo:tencanbo
+            // })
+            if(tencanbo == '' || ketquakhoahoc == '' || chucvu == ''|| tenlop == ''|| giangviendaotao == ''|| noidungdaotao == ''
+                || thoigianbatdau == ''|| thoigianketthuc == ''|| diadiem == ''|| dutoan == ''){
+                alert('Vui lòng nhập Đầy Đủ Thông Tin');
+                return false;
+            }
+
+            //Lấy toàn bộ dữ liệu trong Form
+            var data = $('form-capnhat-ketqua-khoahoc').serialize();
+            $("form").on('submit', function (e) {
+                e.preventDefault();
+                //ajax call here
+                $.ajax({
+                    method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'data.php', //gửi dữ liệu sang trang data.php
+                    data : data, //dữ liệu sẽ được gửi
+                    success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                    {
+                        if(data == 'false')
+                        {
+                            alert('Cập Nhật KẾT QUẢ KHÓA HỌC không thành công');
+                        }else{
+                            alert('Cập Nhật KẾT QUẢ KHÓA HỌC thành công');
+                            //$('#content').html(data);// dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                        }
+                    }
+                });
+                //stop form submission
+
+            });
+            //Sử dụng phương thức Ajax.
+
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

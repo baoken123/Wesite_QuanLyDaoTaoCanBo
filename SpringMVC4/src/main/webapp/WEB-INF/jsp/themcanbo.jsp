@@ -28,6 +28,7 @@
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
             crossorigin="anonymous"
     />
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <link rel="stylesheet" href="../template.css" />
     <title>Thêm Cán Bộ</title>
 </head>
@@ -242,23 +243,26 @@
                         </button>
                     </div>
                 </div>
-                <div class="boxBorder">
-                    <div class="form-group">
-                        <label for="">Tên Học Viên</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
+                <form class="form-themcanbo" action="/" id="form-themcanbo">
+                    <div class="boxBorder">
+                        <div class="form-group">
+                            <label for="">Tên Học Viên</label>
+                            <input type="text" class="form-control" name="ten-can-bo" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
 
-                        <label for="">Chúc Vụ</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
+                            <label for="">Chúc Vụ</label>
+                            <input type="text" class="form-control" name="chuc-vu-can-bo" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
 
-                        <label for="">Phòng Ban</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+                            <label for="">Phòng Ban</label>
+                            <input type="text" class="form-control" name="phong-ban" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+
+                        </div>
 
                     </div>
+                    <div class="box-button">
+                        <button class="btn btn-primary" type="submit" name="them-canbo">Đồng Ý</button>
+                    </div>
+                </form>
 
-                </div>
-                <div class="box-button">
-                    <div class="btn btn-primary">Đồng Ý</div>
-                </div>
             </div>
         </div>
     </div>
@@ -267,7 +271,65 @@
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+
+        //khi nút submit được click
+        submit.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            var tencanbo = $("input[name='ten-can-bo']").val(); //lấy giá trị trong input user
+            var chucvucanbo = $("input[name='chuc-vu-can-bo']").val();
+            var phongban = $("input[name='phong-ban']").val();
+            //Kiểm tra xem trường đã được nhập hay chưa
+            // var data = JSON.stringify({
+            //     Tencanbo:tencanbo
+            // })
+            if(tencanbo == ''){
+                alert('Vui lòng nhập Tên Cán Bộ');
+                return false;
+            }
+            if(chucvucanbo == ''){
+                alert('Vui lòng nhập chức vụ cán bộ');
+                return false;
+            }
+            if(phongban == ''){
+                alert('Vui lòng nhập Tên phòng ban');
+                return false;
+            }
+
+            //Lấy toàn bộ dữ liệu trong Form
+            var data = $('form-themcanbo').serialize();
+            $("form").on('submit', function (e) {
+                e.preventDefault();
+                //ajax call here
+                $.ajax({
+                    method : 'POST', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'data.php', //gửi dữ liệu sang trang data.php
+                    data : data, //dữ liệu sẽ được gửi
+                    success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                    {
+                        if(data == 'false')
+                        {
+                            alert('thêm cán bộ không thành công');
+                        }else{
+                            alert('thêm cán bộ thành công');
+                            //$('#content').html(data);// dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                        }
+                    }
+                });
+                //stop form submission
+
+            });
+            //Sử dụng phương thức Ajax.
+
+            return false;
+        });
+    });
+</script>
 </body>
 </html>
