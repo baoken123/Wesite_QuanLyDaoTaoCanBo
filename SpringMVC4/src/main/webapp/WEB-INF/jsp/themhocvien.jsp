@@ -205,7 +205,7 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Kế Hoạch Đào Tạo</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
                         <a href="can-bo" style="text-decoration: none;color: black;">Cán Bộ</a>
