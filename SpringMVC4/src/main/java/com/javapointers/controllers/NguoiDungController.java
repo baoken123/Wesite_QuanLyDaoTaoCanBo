@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.javapointers.models.Account;
-import com.javapointers.models.IUser;
+import com.javapointers.models.INguoiDung;
+import com.javapointers.models.TaiKhoan;
 import com.javapointers.session.ISessionFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,7 +29,7 @@ public class NguoiDungController {
     ISessionFilter SessionFilter;
 
     @Autowired
-    IUser User;
+    INguoiDung nguoiDung;
 
     public static boolean isLocalHost;
 
@@ -44,11 +44,11 @@ public class NguoiDungController {
     @RequestMapping(value = "/dang-nhap", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
     public @ResponseBody
     String Login(@RequestParam(value = "tenDangNhap") String tenDangNhap, @RequestParam(value = "matKhau") String matKhau, HttpSession session, HttpServletResponse response, HttpServletRequest request) {
-        Account objUser = new Account();
-        objUser.ganTenDangNhap(tenDangNhap);
-        objUser.ganMatKhau(tienich.tienich.encodePass(matKhau).trim());
-        if (objUser != null) {
-            List<Map<String, Object>> list = User.dangNhap(objUser);
+        TaiKhoan taiKhoan = new TaiKhoan();
+        taiKhoan.ganTenDangNhap(tenDangNhap);
+        taiKhoan.ganMatKhau(tienich.tienich.encodePass(matKhau).trim());
+        if (taiKhoan != null) {
+            List<Map<String, Object>> list = nguoiDung.DangNhap(taiKhoan);
             if (!list.isEmpty()) {
                 return "SUCCESS";
             }

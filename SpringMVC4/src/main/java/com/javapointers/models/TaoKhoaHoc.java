@@ -18,6 +18,4 @@ public class TaoKhoaHoc {
         this.DiaDiem=diaDiem;
         this.DuToan=duToan;
     }
-
-
 }

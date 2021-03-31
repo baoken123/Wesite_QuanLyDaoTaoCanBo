@@ -248,6 +248,14 @@
                         </tr>
                         </thead>
                         <tbody id="table-danh-sach-khoa-hoc">
+                            <tr th:each="item : ${ListObject}">
+                                <td th:text="${item["MAKHOAHOC"]}"></td>
+                                <td th:text="${item["TENKHOAHOC"]}"></td>
+                                <td th:text="${item["THOIGIANBATDAU"]}"></td>
+                                <td th:text="${item["THOIGIANKETTHUC"]}"></td>
+                                <td th:text="${item["DIADIEM"]}"></td>
+                                <td th:text="${item["DUTOAN"]}"></td>
+                                <td th:text="${item["DUYET"]}"></td>
                                 <td>
                                     <div class="form-check">
                                         <label class="form-check-label">

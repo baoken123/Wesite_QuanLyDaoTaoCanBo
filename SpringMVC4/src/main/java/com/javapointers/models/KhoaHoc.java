@@ -8,16 +8,37 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 @Component
 public class KhoaHoc implements IKhoaHoc {
+
     @Autowired
     @Resource(name = "dataSource")
     DataSource dataSource;
 
     @Override
-    public ServerResult TaoKhoaHoc() {
-        return null;
+    public int TaoKhoaHoc(TaoKhoaHoc model) {
+        String sql = "call ThemKhoaHoc(?,?,?,?,?,?)#i, s, s, s, t, t, s, i";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaKhoaHoc, model.TenKhoaHoc, model.ThoiGianBatDau, model.ThoiGianKetThuc, model.DiaDiem, model.DuToan});
+        return result;
+    }
+
+    @Override
+    public int CapNhatKhoaHoc(CapNhatKhoaHoc model) {
+        String sql = "call CapNhatKhoaHoc(?,?,?,?,?,?)#i, s, s, s, t, t, s, i";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaKhoaHoc, model.TenKhoaHoc, model.ThoiGianBatDau, model.ThoiGianKetThuc, model.DiaDiem, model.DuToan});
+        return result;
+    }
+
+    @Override
+    public int XoaKhoaHoc(String maKhoaHoc) {
+        String sql = "call XoaKhoaHoc(?)#i, s";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        int result=jdbcTemplate.queryForInt(sql, new Object[]{maKhoaHoc});
+        return result;
     }
 
     @Override
@@ -30,6 +51,10 @@ public class KhoaHoc implements IKhoaHoc {
 
     @Override
     public List ChiTietKhoaHoc(String maKhoaHoc) {
-        return null;
+        String sql = "call LayChiTietKhoaHoc(?)#c, s";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        List<Map<String, Object>> result=jdbcTemplate.queryForList(sql, new Object[]{maKhoaHoc});
+        return result;
+
     }
 }
