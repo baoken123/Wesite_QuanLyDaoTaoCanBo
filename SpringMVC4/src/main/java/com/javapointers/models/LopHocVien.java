@@ -30,7 +30,7 @@ public class LopHocVien implements ILopHocVien{
     }
 
     @Override
-    public int ThemLopHocVien(TaoLopHocVien model) {
+    public int ThemLopHocVien(ThemLopHocVienObject model) {
         String sql = "call ThemLopHocVien(?,?,?,?,?)#i, s, s, i, s";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaLopHocVien, model.TenLopHocVien, model.SoLuong, model.GiangVien, model.MaKhoaHoc});
@@ -38,7 +38,7 @@ public class LopHocVien implements ILopHocVien{
     }
 
     @Override
-    public int CapNhatLopHocVien(CapNhatLopHocVien model) {
+    public int CapNhatLopHocVien(CapNhatLopHocVienObject model) {
         String sql = "call CapNhatLopHocVien(?,?,?,?,?)#i, s, s, i, s";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaLopHocVien, model.TenLopHocVien, model.SoLuong, model.GiangVien, model.MaKhoaHoc});

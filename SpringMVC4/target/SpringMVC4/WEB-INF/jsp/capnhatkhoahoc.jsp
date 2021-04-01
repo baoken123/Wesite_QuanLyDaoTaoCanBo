@@ -198,7 +198,7 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action active" >
-                        <a href="khoa-hoc" style="text-decoration: none;color: white;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: white;">Kế Hoạch Đào Tạo</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
                         <a href="can-bo" style="text-decoration: none;color: black;">Cán Bộ</a>
@@ -233,33 +233,36 @@
                     </div>
                 </div>
                 <!-- khoa hoc -->
-                <div class="boxBorder">
-                    <div class="form-group">
-                        <label for="">Tên Khóa Học</label>
-                        <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học">
+                <form action="/" id="form-capnhat-khoahoc">
+                    <div class="boxBorder">
+                        <div class="form-group">
+                            <label for="">Tên Khóa Học</label>
+                            <input type="text"
+                                   class="form-control" name="ten-khoahoc" id="" aria-describedby="helpId" placeholder="điền tên khóa học">
 
-                        <label for="">Thời Gian Bắt Đầu</label>
-                        <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="chọn thời gian bắt đầu">
+                            <label for="">Thời Gian Bắt Đầu</label>
+                            <input type="datetime-local"
+                                   class="form-control" name="thoigian-batdau" id="" aria-describedby="helpId" placeholder="chọn thời gian bắt đầu">
 
-                        <label for="">Thời Gian Kết Thúc</label>
-                        <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="chọn thời gian kết thúc">
+                            <label for="">Thời Gian Kết Thúc</label>
+                            <input type="datetime-local"
+                                   class="form-control" name="thoigian-ketthuc" id="" aria-describedby="helpId" placeholder="chọn thời gian kết thúc">
 
-                        <label for="">Địa Điểm</label>
-                        <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền địa điểm">
+                            <label for="">Địa Điểm</label>
+                            <input type="text"
+                                   class="form-control" name="diadiem" id="" aria-describedby="helpId" placeholder="điền địa điểm">
 
-                        <label for="">Dự Toán</label>
-                        <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền số tiền dự toán">
+                            <label for="">Dự Toán</label>
+                            <input type="text"
+                                   class="form-control" name="dutoan" id="" aria-describedby="helpId" placeholder="điền số tiền dự toán">
+                        </div>
+
                     </div>
+                    <div class="box-button">
+                        <button class="btn btn-primary" type="submit">Lưu</button>
+                    </div>
+                </form>
 
-                </div>
-                <div class="box-button">
-                    <div class="btn btn-primary">Lưu</div>
-                </div>
             </div>
         </div>
     </div>
@@ -268,7 +271,58 @@
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+
+        //khi nút submit được click
+        submit.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            var tenkhoahoc = $("input[name='ten-khoahoc']").val(); //lấy giá trị trong input user
+            var thoigianbatdau = $("input[name='thoigian-batdau']").val();
+            var thoigianketthuc = $("input[name='thoigian-ketthuc']").val();
+            var diadiem = $("input[name='diadiem']").val();
+            var dutoan = $("input[name='dutoan']").val();
+            //Kiểm tra xem trường đã được nhập hay chưa
+            // var data = JSON.stringify({
+            //     Tencanbo:tencanbo
+            // })
+            if(tenkhoahoc == '' || thoigianbatdau == '' || thoigianketthuc == '' || diadiem == '' || dutoan == ''){
+                alert('Vui lòng nhập Đầy Đủ Thông Tin');
+                return false;
+            }
+
+            //Lấy toàn bộ dữ liệu trong Form
+            var data = $('form-capnhat-khoahoc').serialize();
+            $("form").on('submit', function (e) {
+                e.preventDefault();
+                //ajax call here
+                $.ajax({
+                    method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'data.php', //gửi dữ liệu sang trang data.php
+                    data : data, //dữ liệu sẽ được gửi
+                    success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                    {
+                        if(data == 'false')
+                        {
+                            alert('Cập Nhật KHÓA HỌC không thành công');
+                        }else{
+                            alert('Cập Nhật KHÓA HỌC thành công');
+                            //$('#content').html(data);// dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                        }
+                    }
+                });
+                //stop form submission
+
+            });
+            //Sử dụng phương thức Ajax.
+
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

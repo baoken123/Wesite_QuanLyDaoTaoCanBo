@@ -1,15 +1,11 @@
 package com.javapointers.controllers;
 
-import com.javapointers.models.CapNhatKhoaHoc;
+import com.javapointers.models.CapNhatKhoaHocObject;
 import com.javapointers.models.IKhoaHoc;
-import com.javapointers.models.KhoaHoc;
-import com.javapointers.models.TaoKhoaHoc;
-import jdk.nashorn.internal.parser.JSONParser;
+import com.javapointers.models.ThemKhoaHocObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,21 +25,20 @@ public class KhoaHocController {
     IKhoaHoc khoaHoc;
 
     @RequestMapping(value="/khoa-hoc", method = RequestMethod.GET)
-    public String KhoaHoc(Model model){
-        List objListResult = khoaHoc.LayDanhSachKhoaHoc();
-        model.addAttribute("ListObject", objListResult);
+    public String KhoaHoc(){
         return "khoahoc";
     }
 
-    @RequestMapping(value="/danh-sach-khoa-hoc", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
-    public @ResponseBody
-    List DanhSachKhoaHoc(){
-        List objListResult = khoaHoc.LayDanhSachKhoaHoc();
+    @RequestMapping(value="/danh-sach-khoa-hoc", method = RequestMethod.GET)
+    @ResponseBody
+    public List<Map<String, Object>> DanhSachKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+        List<Map<String, Object>> objListResult = khoaHoc.LayDanhSachKhoaHoc();
         return objListResult;
     }
 
     @RequestMapping(value="/them-khoa-hoc", method = RequestMethod.GET)
-    public String ThemKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request){
+    public String ThemKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+        response.wait();
         return "themkhoahoc";
     }
 
@@ -60,7 +55,7 @@ public class KhoaHocController {
             Date thoiGianKetThucParse;
             thoiGianKetThucParse = df.parse(thoiGianKetThuc);
 
-            if (khoaHoc.TaoKhoaHoc(new TaoKhoaHoc(maKhoaHoc, tenKhoaHoc, thoiGianBatDauParse, thoiGianKetThucParse, diaDiem, Integer.parseInt(duToan))) > 0) {
+            if (khoaHoc.TaoKhoaHoc(new ThemKhoaHocObject(maKhoaHoc, tenKhoaHoc, thoiGianBatDauParse, thoiGianKetThucParse, diaDiem, Integer.parseInt(duToan))) > 0) {
                 return "SUCCESS";
             } else {
                 return "FAIL";
@@ -88,7 +83,7 @@ public class KhoaHocController {
             Date thoiGianKetThucParse;
             thoiGianKetThucParse = df.parse(thoiGianKetThuc);
 
-            if (khoaHoc.CapNhatKhoaHoc(new CapNhatKhoaHoc(maKhoaHoc, tenKhoaHoc, thoiGianBatDauParse, thoiGianKetThucParse, diaDiem, Integer.parseInt(duToan))) > 0) {
+            if (khoaHoc.CapNhatKhoaHoc(new CapNhatKhoaHocObject(maKhoaHoc, tenKhoaHoc, thoiGianBatDauParse, thoiGianKetThucParse, diaDiem, Integer.parseInt(duToan))) > 0) {
                 return "SUCCESS";
             } else {
                 return "FAIL";
@@ -106,5 +101,15 @@ public class KhoaHocController {
         } else {
             return "FAIL";
         }
+    }
+
+    @RequestMapping(value="/ket-qua-khoa-hoc", method = RequestMethod.GET)
+    public String KetQuaKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+        return "ketquakhoahoc";
+    }
+
+    @RequestMapping(value="/them-ket-qua-khoa-hoc", method = RequestMethod.GET)
+    public String ThemKetQuaKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+        return "themketquakhoahoc";
     }
 }

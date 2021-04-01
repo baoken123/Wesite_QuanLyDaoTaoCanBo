@@ -198,7 +198,7 @@
             <div class="cColNavbarLeft__panelMenu">
                 <div class="list-group" style="width:100%;text-align: center;">
                     <button type="button" class="list-group-item list-group-item-action " >
-                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Khóa Học</a>
+                        <a href="khoa-hoc" style="text-decoration: none;color: black;">Kế Hoạch Đào Tạo</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action ">
                         <a href="can-bo" style="text-decoration: none;color: black;">Cán Bộ</a>
@@ -276,9 +276,11 @@
                                     <button >
                                         <a style="color: black;" href="cap-nhap-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
+                                    <a href="#">
+                                        <button type="" id="data-canbo" data-canbo="datacanbo">
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </a>
                                 </div>
                             </td>
                         </tr>

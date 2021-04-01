@@ -248,37 +248,7 @@
                         </tr>
                         </thead>
                         <tbody id="table-danh-sach-khoa-hoc">
-                            <tr th:each="item : ${ListObject}">
-                                <td th:text="${item["MAKHOAHOC"]}"></td>
-                                <td th:text="${item["TENKHOAHOC"]}"></td>
-                                <td th:text="${item["THOIGIANBATDAU"]}"></td>
-                                <td th:text="${item["THOIGIANKETTHUC"]}"></td>
-                                <td th:text="${item["DIADIEM"]}"></td>
-                                <td th:text="${item["DUTOAN"]}"></td>
-                                <td th:text="${item["DUYET"]}"></td>
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div style="display: flex; flex-flow: row nowrap; justify-content: space-evenly; align-items: center;">
-                                        <button>
-                                            <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
-                                        </button>
-                                        <button >
-                                            <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
-                                        </button>
-                                        <a href="#">
-                                            <button type="" id="data-canbo" data-canbo="datacanbo">
-                                                <i class="fas fa-trash-alt fa-lg"></i>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
+
                         <tr>
                             <th scope="row">2</th>
                             <td>Test data 2</td>
@@ -336,8 +306,7 @@
         $.ajax({
             url:'/danh-sach-khoa-hoc',
             accept: 'application/json',
-            type: 'GET',
-            contentType: 'application/json'
+            method: 'GET',
         }).done((response)=>{
             console.log(response);
         });

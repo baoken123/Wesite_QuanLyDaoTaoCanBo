@@ -33,13 +33,23 @@ public class NguoiDungController {
 
     public static boolean isLocalHost;
 
+
     @RequestMapping(value = "/")
     public String Index(ModelMap mm, HttpSession session) {
         if (SessionFilter.checkSession(session)) {
             return "khoahoc";
         }
+        return "redirect:/dang-nhap";
+    }
+
+    @RequestMapping(value = "/dang-nhap", method = RequestMethod.GET)
+    public String DangNhap(ModelMap mm, HttpSession session) {
+        if (SessionFilter.checkSession(session)) {
+            return "khoahoc";
+        }
         return "dangnhap";
     }
+
 
     @RequestMapping(value = "/dang-nhap", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
     public @ResponseBody

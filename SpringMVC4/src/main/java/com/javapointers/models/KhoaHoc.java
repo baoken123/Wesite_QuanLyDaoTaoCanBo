@@ -8,7 +8,6 @@ import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 @Component
 public class KhoaHoc implements IKhoaHoc {
@@ -18,7 +17,7 @@ public class KhoaHoc implements IKhoaHoc {
     DataSource dataSource;
 
     @Override
-    public int TaoKhoaHoc(TaoKhoaHoc model) {
+    public int TaoKhoaHoc(ThemKhoaHocObject model) {
         String sql = "call ThemKhoaHoc(?,?,?,?,?,?)#i, s, s, s, t, t, s, i";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaKhoaHoc, model.TenKhoaHoc, model.ThoiGianBatDau, model.ThoiGianKetThuc, model.DiaDiem, model.DuToan});
@@ -26,7 +25,7 @@ public class KhoaHoc implements IKhoaHoc {
     }
 
     @Override
-    public int CapNhatKhoaHoc(CapNhatKhoaHoc model) {
+    public int CapNhatKhoaHoc(CapNhatKhoaHocObject model) {
         String sql = "call CapNhatKhoaHoc(?,?,?,?,?,?)#i, s, s, s, t, t, s, i";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         int result=jdbcTemplate.queryForInt(sql, new Object[]{model.MaKhoaHoc, model.TenKhoaHoc, model.ThoiGianBatDau, model.ThoiGianKetThuc, model.DiaDiem, model.DuToan});
@@ -50,11 +49,19 @@ public class KhoaHoc implements IKhoaHoc {
     }
 
     @Override
-    public List ChiTietKhoaHoc(String maKhoaHoc) {
+    public List<Map<String, Object>> ChiTietKhoaHoc(String maKhoaHoc) {
         String sql = "call LayChiTietKhoaHoc(?)#c, s";
         JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
         List<Map<String, Object>> result=jdbcTemplate.queryForList(sql, new Object[]{maKhoaHoc});
         return result;
 
+    }
+
+    @Override
+    public List<Map<String, Object>> LayDanhSachKetQuaKhoaHoc() {
+        String sql = "call LayKetQuaKhoaHoc()#c";
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        List<Map<String, Object>> result=jdbcTemplate.queryForList(sql, new Object[]{});
+        return result;
     }
 }
