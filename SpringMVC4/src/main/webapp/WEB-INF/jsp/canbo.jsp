@@ -259,9 +259,9 @@
                             <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Test data 1</td>
-                                <td>Test data 1</td>
-                                <td>Test data 1</td>
+                                <td>Nguyễn Thế Ngọc</td>
+                                <td>Điều Dưỡng</td>
+                                <td>Phòng kế hoạch tổng hộp</td>
                                 <td>
                                     <div class="form-check">
                                         <label class="form-check-label">
@@ -283,24 +283,87 @@
                                             <a href="" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                         </button>
                                         <button >
-                                            <a style="color: black;" href="cap-nhat-can-bo"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                            <a style="color: black;" href="../CanBo/sua_canbo.html"><i class="fas fa-pen-alt fa-lg"></i></a>
                                         </button>
-
-                                        <a href="#">
-                                            <button type="" id="data-canbo" data-canbo="datacanbo">
-                                                <i class="fas fa-trash-alt fa-lg"></i>
-                                            </button>
-                                        </a>
-
-
+                                        <button>
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
-                                <td>Test data 2</td>
-                                <td>Test data 2</td>
-                                <td>Test data 2</td>
+                                <td>Trần Hoài Đức</td>
+                                <td>Điều Dưỡng</td>
+                                <td>phòng tổ chức cán bộ</td>
+                                <td>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                        </label>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div
+                                            style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                    >
+                                        <button>
+                                            <i class="fas fa-align-justify fa-lg"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-pen-alt fa-lg"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Lê Đông Nghi</td>
+                                <td>Điều Dưỡng</td>
+                                <td>Phòng điều dưỡng</td>
+                                <td>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                        </label>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div
+                                            style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                    >
+                                        <button>
+                                            <i class="fas fa-align-justify fa-lg"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-pen-alt fa-lg"></i>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Đỗ Thuận Dĩ An</td>
+                                <td>Điều Dưỡng</td>
+                                <td>Phòng hành chính quản trị</td>
                                 <td>
                                     <div class="form-check">
                                         <label class="form-check-label">
@@ -375,7 +438,11 @@
                 $.ajax({
                     method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
                     url : 'data.php', //gửi dữ liệu sang trang data.php
-                    data : data, //dữ liệu sẽ được gửi
+                    data : JSON.stringify({
+                        tenlophocvien : tenlophocvien,
+                        soluong : soluong ,
+                        giangvien : giangvien
+                    }), //dữ liệu sẽ được gửi
                     success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
                     {
                         if(data == 'false')

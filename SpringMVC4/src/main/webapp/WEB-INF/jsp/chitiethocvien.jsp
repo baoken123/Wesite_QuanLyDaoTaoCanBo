@@ -244,36 +244,36 @@
                     <div class="form-group">
                         <label for="">Tên Cán Bộ</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="tencanbo" aria-describedby="helpId" placeholder="">
 
                         <label for="">Tên Lớp</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="lopcanbo" aria-describedby="helpId" placeholder="">
 
                         <label for="">Giảng Viên</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="giangvien" aria-describedby="helpId" placeholder="">
 
                         <label for="">Nội Dung</label>
-                        <textarea class="form-control" name="" id="" cols="20" rows="4"></textarea>
+                        <textarea class="form-control" name="" id="noidung" cols="20" rows="4"></textarea>
                         <!-- <input type="text"
                           class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học"> -->
 
                         <label for="">Thời Gian Bắt Đầu</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="thoigianbatdau" aria-describedby="helpId" placeholder="">
 
                         <label for="">Thời Gian Kết Thúc</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="thoigianketthuc" aria-describedby="helpId" placeholder="">
 
                         <label for="">Địa Điểm</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="diadiem" aria-describedby="helpId" placeholder="">
 
                         <label for="">Dự Toán</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" id="dutoan" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
             </div>

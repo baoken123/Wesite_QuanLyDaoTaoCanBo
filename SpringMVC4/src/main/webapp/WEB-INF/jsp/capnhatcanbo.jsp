@@ -299,7 +299,11 @@
                 $.ajax({
                     method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
                     url : 'data.php', //gửi dữ liệu sang trang data.php
-                    data : data, //dữ liệu sẽ được gửi
+                    data : JSON.stringify({
+                        tencanbo:tencanbo,
+                        chucvucanbo:chucvucanbo,
+                        phongban:phongban
+                    }), //dữ liệu sẽ được gửi
                     success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
                     {
                         if(data == 'false')

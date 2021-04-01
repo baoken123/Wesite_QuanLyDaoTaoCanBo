@@ -247,36 +247,117 @@
                             <th scope="col">Thao tác</th>
                         </tr>
                         </thead>
-                        <tbody id="table-danh-sach-khoa-hoc">
-                                <td>
-                                    <div class="form-check">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value="">
-                                        </label>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div style="display: flex; flex-flow: row nowrap; justify-content: space-evenly; align-items: center;">
-                                        <button>
-                                            <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
-                                        </button>
-                                        <button >
-                                            <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
-                                        </button>
-                                        <a href="#">
-                                            <button type="" id="data-canbo" data-canbo="datacanbo">
-                                                <i class="fas fa-trash-alt fa-lg"></i>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Hồi Sức</td>
+                            <td>2 tháng</td>
+                            <td>Phòng 1 Khu A</td>
+                            <td>2,000,000</td>
+                            <td>
+
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <a href="./ChiTiet_Khoahoc.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                    </button>
+                                    <button >
+                                        <a style="color: black;" href="./Sua_KhoaHoc.html"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
+                            <td>Gây Mê</td>
+                            <td>2 tháng</td>
+                            <td>Phòng 2 Khu A</td>
+                            <td>3,000,000</td>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Gây Tê</td>
+                            <td>2 tháng</td>
+                            <td>Phòng 3 Khu A</td>
+                            <td>3,000,000</td>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Băng Bó</td>
+                            <td>2 tháng</td>
+                            <td>Phòng 4 Khu A</td>
+                            <td>3,000,000</td>
                             <td>
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -314,6 +395,7 @@
 </div>
 
 <script
+
         src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
