@@ -1,7 +1,7 @@
 package com.javapointers.models;
 
-import VSC.jdbc.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;

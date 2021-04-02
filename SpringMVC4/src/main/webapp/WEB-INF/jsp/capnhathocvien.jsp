@@ -245,13 +245,13 @@
                     <div class="boxBorder">
                         <div class="form-group">
                             <label for="">Tên Lớp Học Viên</label>
-                            <input type="text" class="form-control" name="ten-lophocvien" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
+                            <input type="text" class="form-control" name="ten-lophocvien" id="" aria-describedby="helpId" placeholder="Điền tên học viên" value="Hồi Sức">
 
                             <label for="">Số Lượng</label>
-                            <input type="text" class="form-control" name="soluong" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
+                            <input type="text" class="form-control" name="soluong" id="" aria-describedby="helpId" placeholder="Điền chúc vụ" value="30">
 
                             <label for="">Giảng Viên</label>
-                            <input type="text" class="form-control" name="giangvien" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+                            <input type="text" class="form-control" name="giangvien" id="" aria-describedby="helpId" placeholder="Điền phòng ban" value="Nguyễn Văn B">
                         </div>
                     </div>
                     <div class="box-button">

@@ -1,6 +1,5 @@
 package VSC.jdbc;
 
-import com.javapointers.controllers.NguoiDungController;
 import com.zaxxer.hikari.HikariDataSource;
 import oracle.jdbc.OracleTypes;
 import org.springframework.dao.DataAccessException;
