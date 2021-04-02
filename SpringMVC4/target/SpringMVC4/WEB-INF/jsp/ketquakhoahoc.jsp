@@ -250,17 +250,17 @@
                         <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
-                            </td>
+                            <td>Nguyễn Thế Ngọc</td>
+                            <td>Điều Dưỡng</td>
+                            <td>Hồi Sức</td>
+                            <td>Đạt</td>
+                            <!-- <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">
+                                </label>
+                              </div>
+                            </td> -->
                             <td>
                                 <div
                                         style="
@@ -271,32 +271,98 @@
                         "
                                 >
                                     <button>
-                                        <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        <a href="./ChiTiet_KQ.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                     </button>
                                     <button >
-                                        <a style="color: black;" href="cap-nhap-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        <a style="color: black;" href="./Sua_KQ.html"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
-                                    <a href="#">
-                                        <button type="" id="data-canbo" data-canbo="datacanbo">
-                                            <i class="fas fa-trash-alt fa-lg"></i>
-                                        </button>
-                                    </a>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
+                            <td>Trần Hoài Đức</td>
+                            <td>Điều Dưỡng</td>
+                            <td>Gây Mê</td>
+                            <td>Đạt</td>
+                            <!-- <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">
+                                </label>
+                              </div>
+                            </td> -->
                             <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
                                 </div>
                             </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Lê Đông Nghi</td>
+                            <td>Điều Dưỡng</td>
+                            <td>Hồi Sức</td>
+                            <td>Đạt</td>
+                            <!-- <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">
+                                </label>
+                              </div>
+                            </td> -->
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Đỗ Thuận Dĩ An</td>
+                            <td>Điều Dưỡng</td>
+                            <td>Hồi Sức</td>
+                            <td>Đạt</td>
+                            <!-- <td>
+                              <div class="form-check">
+                                <label class="form-check-label">
+                                  <input type="checkbox" class="form-check-input" value="">
+                                </label>
+                              </div>
+                            </td> -->
                             <td>
                                 <div
                                         style="
@@ -329,7 +395,60 @@
 <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"
-></script>
+        crossorigin="anonymous">
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+
+        //khi nút submit được click
+        submit.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            var tencanbo = $("input[name='ten-canbo']").val(); //lấy giá trị trong input user
+            var chucvucanbo = $("input[name='chucvu']").val();
+            var phongban = $("input[name='phongban']").val();
+            //Kiểm tra xem trường đã được nhập hay chưa
+            // var data = JSON.stringify({
+            //     Tencanbo:tencanbo
+            // })
+            if(tencanbo == '' || chucvucanbo == '' || phongban == ''){
+                alert('Vui lòng nhập Đầy Đủ Thông Tin');
+                return false;
+            }
+
+            //Lấy toàn bộ dữ liệu trong Form
+            var data = $('form-capnhap-canbo').serialize();
+            $("form").on('submit', function (e) {
+                e.preventDefault();
+                //ajax call here
+                $.ajax({
+                    method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'data.php', //gửi dữ liệu sang trang data.php
+                    data : JSON.stringify({
+                        tencanbo:tencanbo,
+                        chucvucanbo:chucvucanbo,
+                        phongban:phongban
+                    }), //dữ liệu sẽ được gửi
+                    success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                    {
+                        if(data == 'false')
+                        {
+                            alert('Cập Nhật cán bộ không thành công');
+                        }else{
+                            alert('Cập Nhật cán bộ thành công');
+                            //$('#content').html(data);// dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                        }
+                    }
+                });
+                //stop form submission
+
+            });
+            //Sử dụng phương thức Ajax.
+
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

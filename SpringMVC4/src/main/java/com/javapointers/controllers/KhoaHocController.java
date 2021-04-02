@@ -38,7 +38,6 @@ public class KhoaHocController {
 
     @RequestMapping(value="/them-khoa-hoc", method = RequestMethod.GET)
     public String ThemKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
-        response.wait();
         return "themkhoahoc";
     }
 
@@ -109,7 +108,8 @@ public class KhoaHocController {
     }
 
     @RequestMapping(value="/them-ket-qua-khoa-hoc", method = RequestMethod.GET)
-    public String ThemKetQuaKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
-        return "themketquakhoahoc";
+    public List<Map<String, Object>> ThemKetQuaKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+        List<Map<String, Object>> objListResult = khoaHoc.LayDanhSachKetQuaKhoaHoc();
+        return objListResult;
     }
 }

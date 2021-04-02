@@ -240,6 +240,7 @@
                         </button>
                     </div>
                 </div>
+
                 <div class="boxBorder">
                     <table class="table table-striped">
                         <thead>
@@ -255,9 +256,9 @@
                         <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
-                            <td>Test data 1</td>
+                            <td>Hồi Sức</td>
+                            <td>30</td>
+                            <td>Nguyễn Văn B</td>
                             <td>
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -276,24 +277,56 @@
                         "
                                 >
                                     <button>
-                                        <a href="chi-tiet-hoc-vien" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        <a href="../HocVien/Chitiet_LopHocVien.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
                                     </button>
                                     <button >
-                                        <a style="color: black;" href="cap-nhat-hoc-vien"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        <a style="color: black;" href="../HocVien/Sua_HocVien.html"><i class="fas fa-pen-alt fa-lg"></i></a>
                                     </button>
-                                    <a href="#">
-                                        <button type="" id="data-canbo" data-canbo="datacanbo">
-                                            <i class="fas fa-trash-alt fa-lg"></i>
-                                        </button>
-                                    </a>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
-                            <td>Test data 2</td>
+                            <td>Gây Mê</td>
+                            <td>30</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="">
+                                    </label>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div
+                                        style="
+                          display: flex;
+                          flex-flow: row nowrap;
+                          justify-content: space-evenly;
+                          align-items: center;
+                        "
+                                >
+                                    <button>
+                                        <i class="fas fa-align-justify fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-pen-alt fa-lg"></i>
+                                    </button>
+                                    <button>
+                                        <i class="fas fa-trash-alt fa-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Gây Tê</td>
+                            <td>30</td>
+                            <td>Nguyễn Văn C</td>
                             <td>
                                 <div class="form-check">
                                     <label class="form-check-label">
@@ -335,6 +368,60 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"
-></script>
+>
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+
+        //khi nút submit được click
+        submit.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            var tenlophocvien = $("input[name='ten-lophocvien']").val(); //lấy giá trị trong input user
+            var soluong = $("input[name='soluong']").val();
+            var giangvien = $("input[name='giangvien']").val();
+            //Kiểm tra xem trường đã được nhập hay chưa
+            // var data = JSON.stringify({
+            //     Tencanbo:tencanbo
+            // })
+            if(tenlophocvien == '' || soluong == '' || giangvien == ''){
+                alert('Vui lòng nhập Đầy Đủ Thông Tin');
+                return false;
+            }
+
+            //Lấy toàn bộ dữ liệu trong Form
+            var data = $('form-capnhap-hocvien').serialize();
+            $("form").on('submit', function (e) {
+                e.preventDefault();
+                //ajax call here
+                $.ajax({
+                    method : 'PUT', //Sử dụng kiểu gửi dữ liệu POST
+                    url : 'data.php', //gửi dữ liệu sang trang data.php
+                    data : JSON.stringify({
+                        tenlophocvien : tenlophocvien,
+                        soluong : soluong ,
+                        giangvien : giangvien
+                    }), //dữ liệu sẽ được gửi
+                    success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                    {
+                        if(data == 'false')
+                        {
+                            alert('Cập Nhật Học Viên không thành công');
+                        }else{
+                            alert('Cập Nhật Học Viên thành công');
+                            //$('#content').html(data);// dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
+                        }
+                    }
+                });
+                //stop form submission
+
+            });
+            //Sử dụng phương thức Ajax.
+
+            return false;
+        });
+    });
+</script>
 </body>
 </html>

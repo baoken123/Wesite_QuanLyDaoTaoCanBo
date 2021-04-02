@@ -50,21 +50,17 @@ public class NguoiDungController {
         return "dangnhap";
     }
 
-
     @RequestMapping(value = "/dang-nhap", produces = "text/html; charset=utf-8", method = RequestMethod.POST)
     public @ResponseBody
-    String Login(@RequestParam(value = "tenDangNhap") String tenDangNhap, @RequestParam(value = "matKhau") String matKhau, HttpSession session, HttpServletResponse response, HttpServletRequest request) {
+    List<Map<String, Object>> Login(@RequestParam(value = "tenDangNhap") String tenDangNhap, @RequestParam(value = "matKhau") String matKhau, HttpSession session, HttpServletResponse response, HttpServletRequest request) {
         TaiKhoan taiKhoan = new TaiKhoan();
         taiKhoan.ganTenDangNhap(tenDangNhap);
         taiKhoan.ganMatKhau(tienich.tienich.encodePass(matKhau).trim());
         if (taiKhoan != null) {
             List<Map<String, Object>> list = nguoiDung.DangNhap(taiKhoan);
-            if (!list.isEmpty()) {
-                return "SUCCESS";
-            }
+            return list;
         }
-        //session.setAttribute("Sess_Err", "loi_dangnhap");
-        return "FAIL";
+        return null;
     }
 
     @RequestMapping(value = "/dang-xuat")

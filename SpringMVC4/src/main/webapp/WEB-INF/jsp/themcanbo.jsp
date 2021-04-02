@@ -311,8 +311,14 @@
                     method : 'POST', //Sử dụng kiểu gửi dữ liệu POST
                     url : 'data.php', //gửi dữ liệu sang trang data.php
                     data : JSON.stringify({
+<<<<<<< HEAD
                         tenKhoaHoc:
                         thoiGianBatDau:
+=======
+                        tencanbo:tencanbo,
+                        chucvucanbo:chucvucanbo,
+                        phongban:phongban
+>>>>>>> 8bfb97d837cc6bbbb7405733b5e5d45f5ace2bc6
                     }), //dữ liệu sẽ được gửi
                     success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
                     {
