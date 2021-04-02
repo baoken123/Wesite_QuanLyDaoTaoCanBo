@@ -2,10 +2,13 @@ package com.javapointers.controllers;
 
 import com.javapointers.models.CapNhatKhoaHocObject;
 import com.javapointers.models.IKhoaHoc;
+import com.javapointers.models.KhoaHocObject;
 import com.javapointers.models.ThemKhoaHocObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,13 +28,16 @@ public class KhoaHocController {
     IKhoaHoc khoaHoc;
 
     @RequestMapping(value="/khoa-hoc", method = RequestMethod.GET)
-    public String KhoaHoc(){
+    public String KhoaHoc(Model model){
+
+        List<Map<String, Object>> objListResult = khoaHoc.LayDanhSachKhoaHoc();
+        model.addAttribute("ListResult",objListResult );
         return "khoahoc";
     }
 
     @RequestMapping(value="/danh-sach-khoa-hoc", method = RequestMethod.GET)
     @ResponseBody
-    public List<Map<String, Object>> DanhSachKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
+    public List<Map<String, Object>> DanhSachKhoaHoc(Model model, HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
         List<Map<String, Object>> objListResult = khoaHoc.LayDanhSachKhoaHoc();
         return objListResult;
     }

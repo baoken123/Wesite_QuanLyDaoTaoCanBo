@@ -223,7 +223,7 @@
         <div class="col-md-8 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Sửa Học Viên</span>
+                <span class="title">Cập nhật Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
                         <div class="btn btn-primary"><a href="can-bo">

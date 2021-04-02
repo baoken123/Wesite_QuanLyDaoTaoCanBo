@@ -216,7 +216,7 @@
         <div class="col-8 col-md-8 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Sửa Kết Qủa khoá học</span>
+                <span class="title">Cập nhật Kết Qủa khoá học</span>
                 <div class="boxBorder boxFunction">
                     <div class="btn btn-primary"><a href="ket-qua-khoa-hoc"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>
                     <div class="boxSearch">

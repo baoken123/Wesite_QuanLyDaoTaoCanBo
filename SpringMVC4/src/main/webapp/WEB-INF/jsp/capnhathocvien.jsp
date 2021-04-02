@@ -222,7 +222,7 @@
         <div class="col-md-8 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Sửa Lớp Học Viên</span>
+                <span class="title">Cập nhật Lớp Học Viên</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
                         <div class="btn btn-primary"><a href="hoc-vien"><i class="fa fa-angle-double-left" style="font-size:18px ; color: aliceblue;">Trở Lại</i></a></div>

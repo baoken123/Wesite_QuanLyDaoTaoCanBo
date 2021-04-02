@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -249,144 +250,182 @@
                         </thead>
                         <tbody id="table-danh-sach-khoa-hoc">
                         <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Hồi Sức</td>
-                            <td>2 tháng</td>
-                            <td>Phòng 1 Khu A</td>
-                            <td>2,000,000</td>
-                            <td>
+                        <c:forEach var="itemResult" items="${ListResult}">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
 
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value="">
+                                        </label>
+                                    </div>
 
-                            </td>
-                            <td>
-                                <div
-                                        style="
+                                </td>
+                                <td>
+                                    <div
+                                            style="
                           display: flex;
                           flex-flow: row nowrap;
                           justify-content: space-evenly;
                           align-items: center;
                         "
-                                >
-                                    <button>
-                                        <a href="./ChiTiet_Khoahoc.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
-                                    </button>
-                                    <button >
-                                        <a style="color: black;" href="./Sua_KhoaHoc.html"><i class="fas fa-pen-alt fa-lg"></i></a>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Gây Mê</td>
-                            <td>2 tháng</td>
-                            <td>Phòng 2 Khu A</td>
-                            <td>3,000,000</td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div
-                                        style="
-                          display: flex;
-                          flex-flow: row nowrap;
-                          justify-content: space-evenly;
-                          align-items: center;
-                        "
-                                >
-                                    <button>
-                                        <i class="fas fa-align-justify fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-pen-alt fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Gây Tê</td>
-                            <td>2 tháng</td>
-                            <td>Phòng 3 Khu A</td>
-                            <td>3,000,000</td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div
-                                        style="
-                          display: flex;
-                          flex-flow: row nowrap;
-                          justify-content: space-evenly;
-                          align-items: center;
-                        "
-                                >
-                                    <button>
-                                        <i class="fas fa-align-justify fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-pen-alt fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Băng Bó</td>
-                            <td>2 tháng</td>
-                            <td>Phòng 4 Khu A</td>
-                            <td>3,000,000</td>
-                            <td>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value="">
-                                    </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div
-                                        style="
-                          display: flex;
-                          flex-flow: row nowrap;
-                          justify-content: space-evenly;
-                          align-items: center;
-                        "
-                                >
-                                    <button>
-                                        <i class="fas fa-align-justify fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-pen-alt fa-lg"></i>
-                                    </button>
-                                    <button>
-                                        <i class="fas fa-trash-alt fa-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
+                                    >
+                                        <button>
+                                            <a href="chi-tiet-khoa-hoc" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>
+                                        </button>
+                                        <button >
+                                            <a style="color: black;" href="cap-nhat-khoa-hoc"><i class="fas fa-pen-alt fa-lg"></i></a>
+                                        </button>
+                                        <button>
+                                            <i class="fas fa-trash-alt fa-lg"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </c:forEach>
+<%--                        <tr>--%>
+<%--                            <th scope="row">1</th>--%>
+<%--                            <td>Hồi Sức</td>--%>
+<%--                            <td>2 tháng</td>--%>
+<%--                            <td>Phòng 1 Khu A</td>--%>
+<%--                            <td>2,000,000</td>--%>
+<%--                            <td>--%>
+
+<%--                                <div class="form-check">--%>
+<%--                                    <label class="form-check-label">--%>
+<%--                                        <input type="checkbox" class="form-check-input" value="">--%>
+<%--                                    </label>--%>
+<%--                                </div>--%>
+
+<%--                            </td>--%>
+<%--                            <td>--%>
+<%--                                <div--%>
+<%--                                        style="--%>
+<%--                          display: flex;--%>
+<%--                          flex-flow: row nowrap;--%>
+<%--                          justify-content: space-evenly;--%>
+<%--                          align-items: center;--%>
+<%--                        "--%>
+<%--                                >--%>
+<%--                                    <button>--%>
+<%--                                        <a href="./ChiTiet_Khoahoc.html" style="color: black;"><i class="fas fa-align-justify fa-lg"></i></a>--%>
+<%--                                    </button>--%>
+<%--                                    <button >--%>
+<%--                                        <a style="color: black;" href="./Sua_KhoaHoc.html"><i class="fas fa-pen-alt fa-lg"></i></a>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-trash-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+<%--                            <th scope="row">2</th>--%>
+<%--                            <td>Gây Mê</td>--%>
+<%--                            <td>2 tháng</td>--%>
+<%--                            <td>Phòng 2 Khu A</td>--%>
+<%--                            <td>3,000,000</td>--%>
+<%--                            <td>--%>
+<%--                                <div class="form-check">--%>
+<%--                                    <label class="form-check-label">--%>
+<%--                                        <input type="checkbox" class="form-check-input" value="">--%>
+<%--                                    </label>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                            <td>--%>
+<%--                                <div--%>
+<%--                                        style="--%>
+<%--                          display: flex;--%>
+<%--                          flex-flow: row nowrap;--%>
+<%--                          justify-content: space-evenly;--%>
+<%--                          align-items: center;--%>
+<%--                        "--%>
+<%--                                >--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-align-justify fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-pen-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-trash-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+<%--                            <th scope="row">3</th>--%>
+<%--                            <td>Gây Tê</td>--%>
+<%--                            <td>2 tháng</td>--%>
+<%--                            <td>Phòng 3 Khu A</td>--%>
+<%--                            <td>3,000,000</td>--%>
+<%--                            <td>--%>
+<%--                                <div class="form-check">--%>
+<%--                                    <label class="form-check-label">--%>
+<%--                                        <input type="checkbox" class="form-check-input" value="">--%>
+<%--                                    </label>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                            <td>--%>
+<%--                                <div--%>
+<%--                                        style="--%>
+<%--                          display: flex;--%>
+<%--                          flex-flow: row nowrap;--%>
+<%--                          justify-content: space-evenly;--%>
+<%--                          align-items: center;--%>
+<%--                        "--%>
+<%--                                >--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-align-justify fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-pen-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-trash-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
+<%--                        <tr>--%>
+<%--                            <th scope="row">4</th>--%>
+<%--                            <td>Băng Bó</td>--%>
+<%--                            <td>2 tháng</td>--%>
+<%--                            <td>Phòng 4 Khu A</td>--%>
+<%--                            <td>3,000,000</td>--%>
+<%--                            <td>--%>
+<%--                                <div class="form-check">--%>
+<%--                                    <label class="form-check-label">--%>
+<%--                                        <input type="checkbox" class="form-check-input" value="">--%>
+<%--                                    </label>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                            <td>--%>
+<%--                                <div--%>
+<%--                                        style="--%>
+<%--                          display: flex;--%>
+<%--                          flex-flow: row nowrap;--%>
+<%--                          justify-content: space-evenly;--%>
+<%--                          align-items: center;--%>
+<%--                        "--%>
+<%--                                >--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-align-justify fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-pen-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                    <button>--%>
+<%--                                        <i class="fas fa-trash-alt fa-lg"></i>--%>
+<%--                                    </button>--%>
+<%--                                </div>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
                         </tbody>
                     </table>
                 </div>

@@ -22,9 +22,14 @@ public class CanBoController {
 
     @RequestMapping(value="/can-bo", method = RequestMethod.GET)
     public String CanBo(){
+        List<Map<String, Object>> objListResult=canBo.LayDanhSachCanBo();
         return "canbo";
     }
 
+    @RequestMapping(value="/them-can-bo", method = RequestMethod.GET)
+    public String ThemCanBo(){
+        return "themcanbo";
+    }
 
     @RequestMapping(value="/them-can-bo", method = RequestMethod.POST)
     public String ThemLopHocVien(@RequestParam("tenCanBo") String tenCanBo, @RequestParam("chucVu") String chucVu, @RequestParam("phongBan") String phongBan){

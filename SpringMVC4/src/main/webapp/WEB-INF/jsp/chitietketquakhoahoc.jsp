@@ -262,7 +262,6 @@
                             <!-- <input type="text"
                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học"> -->
 
-<<<<<<< HEAD
                         <label for="">Thời Gian Bắt Đầu</label>
                         <input type="datetime-local"
                                class="form-control" name="" aria-describedby="helpId" placeholder="">
@@ -278,7 +277,6 @@
                         <label for="">Dự Toán</label>
                         <input type="text"
                                class="form-control" name="" aria-describedby="helpId" placeholder="">
-=======
                             <label for="">Thời Gian Bắt Đầu</label>
                             <input type="datetime-local"
                                    class="form-control" name="thoiganbatdau" id="" aria-describedby="helpId" placeholder="">
