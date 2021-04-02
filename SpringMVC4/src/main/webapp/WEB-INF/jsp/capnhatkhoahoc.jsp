@@ -237,23 +237,23 @@
                     <div class="boxBorder">
                         <div class="form-group">
                             <label for="">Tên Khóa Học</label>
-                            <input type="text"
+                            <input type="text" value="Hồi sức"
                                    class="form-control" name="ten-khoahoc" id="" aria-describedby="helpId" placeholder="điền tên khóa học">
 
                             <label for="">Thời Gian Bắt Đầu</label>
-                            <input type="datetime-local"
+                            <input type="" value="01/01/2021"
                                    class="form-control" name="thoigian-batdau" id="" aria-describedby="helpId" placeholder="chọn thời gian bắt đầu">
 
                             <label for="">Thời Gian Kết Thúc</label>
-                            <input type="datetime-local"
+                            <input type="" value="01/03/2021"
                                    class="form-control" name="thoigian-ketthuc" id="" aria-describedby="helpId" placeholder="chọn thời gian kết thúc">
 
                             <label for="">Địa Điểm</label>
-                            <input type="text"
+                            <input type="text" value="Tiền Giang"
                                    class="form-control" name="diadiem" id="" aria-describedby="helpId" placeholder="điền địa điểm">
 
                             <label for="">Dự Toán</label>
-                            <input type="text"
+                            <input type="text" value="2,000,000VNĐ"
                                    class="form-control" name="dutoan" id="" aria-describedby="helpId" placeholder="điền số tiền dự toán">
                         </div>
 

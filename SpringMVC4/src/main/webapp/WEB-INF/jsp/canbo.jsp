@@ -381,14 +381,11 @@
         //khi nút submit được click
         submit.click(function()
         {
-            //khai báo các biến dữ liệu gửi lên server
-            var tenlophocvien = $("input[name='ten-lophocvien']").val(); //lấy giá trị trong input user
+
+            var tenlophocvien = $("input[name='ten-lophocvien']").val();
             var soluong = $("input[name='soluong']").val();
             var giangvien = $("input[name='giangvien']").val();
-            //Kiểm tra xem trường đã được nhập hay chưa
-            // var data = JSON.stringify({
-            //     Tencanbo:tencanbo
-            // })
+
             if(tenlophocvien == '' || soluong == '' || giangvien == ''){
                 alert('Vui lòng nhập Đầy Đủ Thông Tin');
                 return false;

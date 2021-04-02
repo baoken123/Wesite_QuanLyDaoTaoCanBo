@@ -240,7 +240,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="boxBorder">
                     <table class="table table-striped">
                         <thead>

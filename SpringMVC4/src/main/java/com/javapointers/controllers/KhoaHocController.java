@@ -36,6 +36,8 @@ public class KhoaHocController {
         return objListResult;
     }
 
+
+
     @RequestMapping(value="/them-khoa-hoc", method = RequestMethod.GET)
     public String ThemKhoaHoc(HttpSession session, HttpServletResponse response, HttpServletRequest request) throws InterruptedException {
         return "themkhoahoc";

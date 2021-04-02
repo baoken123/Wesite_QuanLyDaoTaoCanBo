@@ -238,62 +238,48 @@
                     <div class="boxBorder">
                         <div class="form-group">
                             <label for="">Tên Cán Bộ</label>
-                            <input type="text"
+                            <input type="text" value="Nguyễn Thế Ngọc"
                                    class="form-control" name="tencanbo" id="" aria-describedby="helpId" placeholder="">
 
                             <label for="">Kết Quả Khóa Học</label>
-                            <input type="text"
+                            <input type="text" value="Đạt"
                                    class="form-control" name="ketquakhoahoc" id="" aria-describedby="helpId" placeholder="">
 
                             <label for="">Chức Vụ</label>
-                            <input type="text"
+                            <input type="text" value="Điều Dưỡng"
                                    class="form-control" name="chucvu" id="" aria-describedby="helpId" placeholder="">
 
                             <label for="">Tên Lớp</label>
-                            <input type="text"
+                            <input type="text" value="Hồi Sức"
                                    class="form-control" name="tenlop" id="" aria-describedby="helpId" placeholder="">
 
                             <label for="">Giảng Viên Đào Tạo</label>
-                            <input type="text"
+                            <input type="text" value="Nguyễn Văn B"
                                    class="form-control" name="giangviendaotao" id="" aria-describedby="helpId" placeholder="">
 
                             <label for="">Nội Dung Đào Tạo</label>
-                            <textarea class="form-control" name="noidungdaotao" id="" cols="20" rows="4"></textarea>
+                            <textarea class="form-control" name="noidungdaotao" id="" cols="20" rows="4">Đào tạo cán bộ</textarea>
                             <!-- <input type="text"
                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="điền tên khóa học"> -->
 
 <<<<<<< HEAD
                         <label for="">Thời Gian Bắt Đầu</label>
-                        <input type="datetime-local"
+                        <input type="" value="01/01/2021"
                                class="form-control" name="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Thời Gian Kết Thúc</label>
-                        <input type="datetime-local"
+                        <input type="" value="01/03/2021"
                                class="form-control" name=""  aria-describedby="helpId" placeholder="">
 
                         <label for="">Địa Điểm</label>
-                        <input type="text"
+                        <input type="text" value="Tiền Giang"
                                class="form-control" name="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Dự Toán</label>
-                        <input type="text"
+                        <input type="text" value="2,000,000VNĐ"
                                class="form-control" name="" aria-describedby="helpId" placeholder="">
 =======
-                            <label for="">Thời Gian Bắt Đầu</label>
-                            <input type="datetime-local"
-                                   class="form-control" name="thoiganbatdau" id="" aria-describedby="helpId" placeholder="">
 
-                            <label for="">Thời Gian Kết Thúc</label>
-                            <input type="datetime-local"
-                                   class="form-control" name="thoigianketthuc" id="" aria-describedby="helpId" placeholder="">
-
-                            <label for="">Địa Điểm</label>
-                            <input type="text"
-                                   class="form-control" name="diadiem" id="" aria-describedby="helpId" placeholder="">
-
-                            <label for="">Dự Toán</label>
-                            <input type="text"
-                                   class="form-control" name="dutoan" id="" aria-describedby="helpId" placeholder="">
                         </div>
 >>>>>>> 8bfb97d837cc6bbbb7405733b5e5d45f5ace2bc6
                     </div>

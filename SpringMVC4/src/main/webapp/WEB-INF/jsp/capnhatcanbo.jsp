@@ -247,14 +247,16 @@
                     <div class="boxBorder">
                         <div class="form-group">
                             <label for="">Tên Học Viên</label>
-                            <input type="text" class="form-control" name="ten-canbo" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
+                            <input type="text" class="form-control" name="ten-canbo" id="" aria-describedby="helpId" placeholder="Điền tên học viên" value="Nguyễn Thế Ngọc">
 
-                            <label for="">Chúc Vụ</label>
-                            <input type="text" class="form-control" name="chucvu" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
+                            <label for="">Chức Vụ</label>
+                            <input type="text" class="form-control" name="chucvu" id="" aria-describedby="helpId" placeholder="Điền chúc vụ" value="Điều Dưỡng">
 
                             <label for="">Phòng Ban</label>
-                            <input type="text" class="form-control" name="phongban" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+                            <input type="text" class="form-control" name="phongban" id="" aria-describedby="helpId" placeholder="Điền phòng ban" value="PHÒNG KẾ HOẠCH TỔNG HỢP">
+
                         </div>
+
                     </div>
                     <div class="box-button">
                         <button class="btn btn-primary" type="submit">Lưu</button>

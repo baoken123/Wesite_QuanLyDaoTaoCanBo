@@ -247,13 +247,13 @@
                     <div class="boxBorder">
                         <div class="form-group">
                             <label for="">Tên Học Viên</label>
-                            <input type="text" class="form-control" name="ten-can-bo" id="" aria-describedby="helpId" placeholder="Điền tên học viên">
+                            <input type="text" class="form-control" name="ten-can-bo" id="" aria-describedby="helpId" placeholder="Điền tên học viên" value="Nguyễn Thế Ngọc">
 
                             <label for="">Chúc Vụ</label>
-                            <input type="text" class="form-control" name="chuc-vu-can-bo" id="" aria-describedby="helpId" placeholder="Điền chúc vụ">
+                            <input type="text" class="form-control" name="chuc-vu-can-bo" id="" aria-describedby="helpId" placeholder="Điền chúc vụ" value="Điều Dưỡng">
 
                             <label for="">Phòng Ban</label>
-                            <input type="text" class="form-control" name="phong-ban" id="" aria-describedby="helpId" placeholder="Điền phòng ban">
+                            <input type="text" class="form-control" name="phong-ban" id="" aria-describedby="helpId" placeholder="Điền phòng ban" value="PHÒNG KẾ HOẠCH TỔNG HỢP">
 
                         </div>
 
@@ -311,14 +311,13 @@
                     method : 'POST', //Sử dụng kiểu gửi dữ liệu POST
                     url : 'data.php', //gửi dữ liệu sang trang data.php
                     data : JSON.stringify({
-<<<<<<< HEAD
-                        tenKhoaHoc:
-                        thoiGianBatDau:
-=======
+
+                        tenKhoaHoc:tenKhoaHoc,
+                        thoiGianBatDau:thoiGianBatDau,
                         tencanbo:tencanbo,
                         chucvucanbo:chucvucanbo,
                         phongban:phongban
->>>>>>> 8bfb97d837cc6bbbb7405733b5e5d45f5ace2bc6
+
                     }), //dữ liệu sẽ được gửi
                     success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
                     {

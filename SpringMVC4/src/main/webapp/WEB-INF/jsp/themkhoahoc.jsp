@@ -336,7 +336,6 @@
 
             });
             //Sử dụng phương thức Ajax.
-
             return false;
         });
     });
