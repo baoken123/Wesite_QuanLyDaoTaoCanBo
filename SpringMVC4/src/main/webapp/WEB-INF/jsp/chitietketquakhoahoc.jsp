@@ -263,19 +263,19 @@
 
                         <label for="">Thời Gian Bắt Đầu</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Thời Gian Kết Thúc</label>
                         <input type="datetime-local"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name=""  aria-describedby="helpId" placeholder="">
 
                         <label for="">Địa Điểm</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" aria-describedby="helpId" placeholder="">
 
                         <label for="">Dự Toán</label>
                         <input type="text"
-                               class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                               class="form-control" name="" aria-describedby="helpId" placeholder="">
                     </div>
                 </div>
                 <!-- <div class="box-button">

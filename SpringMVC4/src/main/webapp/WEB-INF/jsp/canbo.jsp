@@ -206,12 +206,7 @@
                         <a href="khoa-hoc" style="text-decoration: none;color: black;">Kế Hoạch Đào Tạo</a>
                     </button>
                     <button type="button" class="list-group-item list-group-item-action active">
-<<<<<<< HEAD
-                        <a href="can-bo" style="text-decoration: none;color: white;">Cán bộ</a>
-=======
-                        <a href="can-bo" style="text-decoration: none;color: white;">Cán Bộ</a>
->>>>>>> 35c887b1c0c6928d31e3deffe07322b76a224880
-                    </button>
+                        <a href="can-bo" style="text-decoration: none;color: white;">Cán bộ</a></button>
                     <button type="button" class="list-group-item list-group-item-action ">
                         <a href="hoc-vien" style="text-decoration: none;color: black;">Lớp Học Viên</a>
                     </button>
@@ -225,10 +220,10 @@
         <div class="col-md-9 cColContent">
             <div class="theCourse">
                 <!-- Tiêu đề của main content -->
-                <span class="title">Danh Sách Học Viên</span>
+                <span class="title">Danh Sách Cán bộ</span>
                 <div class="boxBorder boxFunction">
                     <button type="button" class="btn btn-primary">
-                        <a href="them-can-bo" style="text-decoration: none;color: white;">Thêm Học viên</a>
+                        <a href="them-can-bo" style="text-decoration: none;color: white;">Thêm Cán bộ</a>
                     </button>
                     <div class="boxSearch">
                         <input
@@ -249,10 +244,9 @@
                             <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Tên Học Viên</th>
+                                <th scope="col">Tên Cán bộ</th>
                                 <th scope="col">Chức Vụ</th>
                                 <th scope="col">Phòng Ban</th>
-                                <th scope="col">Duyệt</th>
                                 <th scope="col">Thao tác</th>
                             </tr>
                             </thead>

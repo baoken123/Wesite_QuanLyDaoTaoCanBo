@@ -19,7 +19,7 @@ public class LopHocVienController {
 
     @RequestMapping(value="/hoc-vien", method = RequestMethod.GET)
     public String index(){
-        return "lophocvien";
+        return "hocvien";
     }
 
     @RequestMapping(value="/them-hoc-vien", method = RequestMethod.POST)

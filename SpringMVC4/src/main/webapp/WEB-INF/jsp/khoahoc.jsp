@@ -305,7 +305,6 @@
     $(document).ready(()=>{
         $.ajax({
             url:'/danh-sach-khoa-hoc',
-            accept: 'application/json',
             method: 'GET',
         }).done((response)=>{
             console.log(response);

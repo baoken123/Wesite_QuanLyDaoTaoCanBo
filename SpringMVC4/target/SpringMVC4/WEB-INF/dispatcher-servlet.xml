@@ -13,6 +13,7 @@
     <bean id="NguoiDung" class="com.javapointers.models.NguoiDung"/>
     <bean id="KhoaHoc" class="com.javapointers.models.KhoaHoc"/>
     <bean id="LopHocVien" class="com.javapointers.models.LopHocVien"/>
+    <bean id="CanBo" class="com.javapointers.models.CanBo"/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/jsp/</value>

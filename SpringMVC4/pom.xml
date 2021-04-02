@@ -69,7 +69,6 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.0.2.RELEASE</version>
         </dependency>
-
     </dependencies>
     <build>
         <finalName>SpringMVC4</finalName>
